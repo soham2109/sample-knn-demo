@@ -48,19 +48,20 @@ def plot_data_points(X,y, input_data):
 				  class1_data[:,1],
 				  color="r",
 				  label="class1",
-				  s=8,
+				  s=15,
 				  alpha=0.7)
 	ax.scatter(class2_data[:,0],
 				  class2_data[:,1],
 				  color="b",
 				  label="class2",
-				  s=8,
+				  s=15,
 				  alpha=0.7)
 	ax.scatter(input_data[0],
 				  input_data[1],
 				  color="g",
 				  label="unknown",
-				  alpha=0.7)
+				  alpha=0.7,
+		  		  s=25 )
 
 	ax.legend(loc="best")
 	ax.set_ylim((-0.1, 1.1))
@@ -81,19 +82,20 @@ def plot_data_points_with_labels(X, y, X_nearest, y_nearest, input_data, label):
 				  class1_data[:,1],
 				  color="r",
 				  label="class1",
-				  s=8,
+				  s=15,
 				  alpha=0.7)
 	ax.scatter(class2_data[:,0],
 				  class2_data[:,1],
 				  color="b",
 				  label="class1",
-				  s=8,
+				  s=15,
 				  alpha=0.7)
 	ax.scatter(input_data[0],
 				  input_data[1],
 				  color="g",
 				  # label="unknown",
-				  alpha=0.7)
+				  alpha=0.7,
+		  s=25,)
 	plt.text(input_data[0]+0.05, input_data[1]-0.05, "Prediction: {}".format(label))
 
 	i = 0
@@ -101,7 +103,7 @@ def plot_data_points_with_labels(X, y, X_nearest, y_nearest, input_data, label):
 		ax.plot([x[0], input_data[0]],
 				[x[1], input_data[1]],
 				colors[i],
-				label="neighbour {}".format(i+1))
+				label="neighbour {}".format(i+1), lw=5)
 		i+=1
 
 	ax.legend(loc="best")
