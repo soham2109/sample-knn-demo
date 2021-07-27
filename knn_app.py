@@ -87,7 +87,7 @@ def plot_data_points_with_labels(X, y, X_nearest, y_nearest, input_data, label):
 	ax.scatter(class2_data[:,0],
 				  class2_data[:,1],
 				  color="b",
-				  label="class1",
+				  label="class2",
 				  s=15,
 				  alpha=0.7)
 	ax.scatter(input_data[0],
