@@ -24,7 +24,7 @@ def get_points_above(sma_low, sma_high):
 
 	return points_above
   
-def get_crossovers(SMA20 , SMA50):
+def get_crossovers(nflx, SMA20 , SMA50):
 	crossovers = pd.DataFrame()
 	crossovers['Dates'] = SMA20['Date']
 	crossovers['Price'] = [i for i in nflx['Close']]
@@ -58,7 +58,7 @@ def app():
 	SMA20_reset = SMA20.reset_index()
 	SMA50_reset = SMA50.reset_index()
 
-	crossovers = get_crossovers(SMA20_reset , SMA50_reset)
+	crossovers = get_crossovers(nflx, SMA20_reset , SMA50_reset)
 	crossovers = crossovers.loc[crossovers['Crossover'] == True]
 	crossovers = crossovers.reset_index()
 	crossovers = crossovers.drop(['position', 'pre-position', 'Crossover', 'index'], axis=1)
