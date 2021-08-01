@@ -75,9 +75,9 @@ def app():
 	# print(crossovers)
 	st.title("Algorithmic Trading using SMA20 and SMA50")
 	st.subheader("Netflix Stock Data")
-	st.dataframe(nflx)
+	st.dataframe(nflx.head(10))
 	st.subheader("Defining Crossovers after SMA calculations")
-	st.dataframe(crossovers)
+	st.dataframe(crossovers.head(10))
 
 	st.subheader("Let's visualize the data obtained.")
 	st.pyplot(return_plot(nflx, SMA20, SMA50, crossovers))
