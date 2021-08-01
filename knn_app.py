@@ -8,8 +8,8 @@ import SMA_algotrad
 import k_nearest_neighbours
 import streamlit as st
 
-PAGES = {"KNN"neighbours: k_nearest_neighbours,
-		 "Simple Moving Average": SMA_algotrad}
+PAGES = {"k-Nearest Neighbours": k_nearest_neighbours,
+	 "Simple Moving Average": SMA_algotrad}
 
 def app():
 	st.sidebar.title("Navigation Bar")
