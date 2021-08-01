@@ -47,7 +47,7 @@ def return_plot(nflx, SMA20, SMA50, crossovers):
 	ax.plot(crossovers.loc[crossovers.Signal == 'Sell']['Dates'][-4:], 
 		  crossovers['SMA20'][crossovers.Signal == 'Sell'][-4:],
 		  'v', markersize=15, color='r', label='Sell')
-	plt.legend(loc='upper left', fontsize=15)
+	ax.legend(loc='upper left', fontsize=15)
 	return fig
   
 
